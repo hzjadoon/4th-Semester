@@ -1,0 +1,22 @@
+# Name of Programmer -- Hassan Zaib Jadoon Github: @hzjadoon
+# Registration no. -- 22PWCSE2144
+
+# LabA7
+
+.text
+main:    
+    addi $t0, $0, 5       # Load value 5 into $t0
+    addi $t1, $0, 10      # Load value 10 into $t1
+    slt  $t3, $t0, $t1    # Set $t3 to 1 if $t0 < $t1, else 0
+    bne  $t3, $0, XX      # If $t3 is not zero, branch to XX
+    sub  $t2, $t0, $t1    # Subtract $t1 from $t0, store result in $t2
+    j    YY               # Jump to YY
+XX:
+    add  $t2, $t0, $t1    # Add $t0 and $t1, store result in $t2
+YY:
+    addi $v0, $0, 1       # Set $v0 to 1 for print integer syscall
+    add  $a0, $0, $t2     # Move value of $t2 to $a0 for printing
+    syscall               # Print the result
+    jr $ra                # Return to caller
+
+
