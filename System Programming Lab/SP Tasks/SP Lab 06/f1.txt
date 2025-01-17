@@ -1,0 +1,2 @@
+Hello this is f1.txt
+Hello i am writing to f1.txt
